@@ -16,6 +16,12 @@
 		AAAC8352206223670096FD54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAAC8351206223670096FD54 /* GoogleService-Info.plist */; };
 		AAAC8354206224EE0096FD54 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC8353206224EE0096FD54 /* SignUpViewController.swift */; };
 		AAAC835720626DEF0096FD54 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835620626DEF0096FD54 /* Alert.swift */; };
+		AAAC835A206287EF0096FD54 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC8359206287EF0096FD54 /* IdeaViewController.swift */; };
+		AAAC835C20628B8B0096FD54 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835B20628B8B0096FD54 /* AddViewController.swift */; };
+		AAAC835E20628B9C0096FD54 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */; };
+		AAAC836020628BA80096FD54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835F20628BA80096FD54 /* ProfileViewController.swift */; };
+		AAAC83622062A00A0096FD54 /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */; };
+		AAAC83652062A4DE0096FD54 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC83642062A4DE0096FD54 /* Idea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		AAAC8351206223670096FD54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAAC8353206224EE0096FD54 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AAAC835620626DEF0096FD54 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		AAAC8359206287EF0096FD54 /* IdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
+		AAAC835B20628B8B0096FD54 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		AAAC835F20628BA80096FD54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
+		AAAC83642062A4DE0096FD54 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		E99ADC2011F6646C7A5A0B27 /* Pods_IdeaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdeaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFE6DC97907FE627E12167C /* Pods-IdeaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaApp/Pods-IdeaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD88C3A8E064B5C1705D7F1 /* Pods-IdeaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaApp/Pods-IdeaApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,8 +88,11 @@
 		AAAC833E206221100096FD54 /* IdeaApp */ = {
 			isa = PBXGroup;
 			children = (
+				AAAC83632062A4C80096FD54 /* ClassFiles */,
 				AAAC833F206221100096FD54 /* AppDelegate.swift */,
 				AAAC835620626DEF0096FD54 /* Alert.swift */,
+				AAAC8343206221100096FD54 /* Main.storyboard */,
+				AAAC83582062876E0096FD54 /* MainTab */,
 				AAAC8355206224F50096FD54 /* Login&SignUp */,
 				AAAC8346206221100096FD54 /* Assets.xcassets */,
 				AAAC8348206221100096FD54 /* LaunchScreen.storyboard */,
@@ -90,11 +105,30 @@
 		AAAC8355206224F50096FD54 /* Login&SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				AAAC8343206221100096FD54 /* Main.storyboard */,
 				AAAC8341206221100096FD54 /* LoginViewController.swift */,
 				AAAC8353206224EE0096FD54 /* SignUpViewController.swift */,
 			);
 			path = "Login&SignUp";
+			sourceTree = "<group>";
+		};
+		AAAC83582062876E0096FD54 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				AAAC8359206287EF0096FD54 /* IdeaViewController.swift */,
+				AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */,
+				AAAC835B20628B8B0096FD54 /* AddViewController.swift */,
+				AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */,
+				AAAC835F20628BA80096FD54 /* ProfileViewController.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		AAAC83632062A4C80096FD54 /* ClassFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AAAC83642062A4DE0096FD54 /* Idea.swift */,
+			);
+			path = ClassFiles;
 			sourceTree = "<group>";
 		};
 		EC72E6130B8882F1D7B22AF1 /* Frameworks */ = {
@@ -243,8 +277,14 @@
 			files = (
 				AAAC8354206224EE0096FD54 /* SignUpViewController.swift in Sources */,
 				AAAC8342206221100096FD54 /* LoginViewController.swift in Sources */,
+				AAAC83652062A4DE0096FD54 /* Idea.swift in Sources */,
+				AAAC835C20628B8B0096FD54 /* AddViewController.swift in Sources */,
 				AAAC835720626DEF0096FD54 /* Alert.swift in Sources */,
+				AAAC83622062A00A0096FD54 /* IdeaTableViewCell.swift in Sources */,
 				AAAC8340206221100096FD54 /* AppDelegate.swift in Sources */,
+				AAAC835E20628B9C0096FD54 /* ExploreViewController.swift in Sources */,
+				AAAC836020628BA80096FD54 /* ProfileViewController.swift in Sources */,
+				AAAC835A206287EF0096FD54 /* IdeaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
