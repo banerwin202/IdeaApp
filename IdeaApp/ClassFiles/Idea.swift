@@ -14,6 +14,11 @@ class Idea {
     var status : String = ""
     var date : String = ""
     
+    var ideaPicUID : String = ""
+    var userID : String = ""
+    var timeStamp : Int = 0
+    var ideaPicURL : String = ""
+    
     init() {
         
     }
@@ -23,6 +28,14 @@ class Idea {
         self.title = dict["IdeaTitle"] as? String ?? "No Idea"
         self.status = dict["IdeaStatus"] as? String ?? "No Status"
         self.date = dict["IdeaDate"] as? String ?? "No Date"
+        
+        self.ideaPicUID = uid
+        self.userID = dict["userID"] as? String ?? "No ID"
+        self.timeStamp = dict["timeStamp"] as? Int ?? 0
+        self.ideaPicURL = dict["ideaPicURL"] as? String ?? "No URL"
+
+        
+
         
     }
     

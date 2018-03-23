@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     
+    @IBOutlet weak var signInButton: UIButton!
+    
     @IBAction func loginBtnTapped(_ sender: Any) {
         signInButtonTapped()
     }
@@ -26,12 +28,37 @@ class LoginViewController: UIViewController {
         ref = Database.database().reference()
         
         userChecking()
+        disablesSignInBtn()
     
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    func disablesSignInBtn() {
+        signInButton.isEnabled = false
+        
+        loginTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty(sender:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty(sender:)), for: .editingChanged)
+
+    }
+    
+    @objc func textFieldsIsNotEmpty(sender: UITextField) {
+        
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        
+        guard
+              let login = loginTextField.text, !login.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty
+              else
+        {
+            self.signInButton.isEnabled = false
+            return
+        }
+        // enable okButton if all conditions are met
+        signInButton.isEnabled = true
     }
     
     func userChecking () {

@@ -1,24 +1,23 @@
 //
-//  IdeaTableViewCell.swift
-//  IdeaApp
+//  IdeaDetailTableViewCell.swift
+//  
 //
 //  Created by Ban Er Win on 22/03/2018.
-//  Copyright © 2018 Ban Er Win. All rights reserved.
 //
 
 import UIKit
 
-class IdeaTableViewCell: UITableViewCell {
+class IdeaDetailTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var userUsernameLabel: UILabel!
     
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var userCommentLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

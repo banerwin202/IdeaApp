@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9DA96260552FB5C6B7C18E02 /* Pods_IdeaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99ADC2011F6646C7A5A0B27 /* Pods_IdeaApp.framework */; };
+		AA21913C206396F500209C2E /* IdeaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21913A206396F400209C2E /* IdeaDetailTableViewCell.swift */; };
+		AA2191422063996600209C2E /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2191402063996600209C2E /* IdeaTableViewCell.swift */; };
+		AA2191432063996600209C2E /* IdeaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2191412063996600209C2E /* IdeaTableViewCell.xib */; };
+		AA2191462063A06D00209C2E /* IdeaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2191442063A06D00209C2E /* IdeaDetailViewController.swift */; };
+		AA2191492063C85900209C2E /* IdeaDetailMapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2191482063C85900209C2E /* IdeaDetailMapKitViewController.swift */; };
 		AAAC8340206221100096FD54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC833F206221100096FD54 /* AppDelegate.swift */; };
 		AAAC8342206221100096FD54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC8341206221100096FD54 /* LoginViewController.swift */; };
 		AAAC8345206221100096FD54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAC8343206221100096FD54 /* Main.storyboard */; };
@@ -17,14 +22,22 @@
 		AAAC8354206224EE0096FD54 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC8353206224EE0096FD54 /* SignUpViewController.swift */; };
 		AAAC835720626DEF0096FD54 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835620626DEF0096FD54 /* Alert.swift */; };
 		AAAC835A206287EF0096FD54 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC8359206287EF0096FD54 /* IdeaViewController.swift */; };
-		AAAC835C20628B8B0096FD54 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835B20628B8B0096FD54 /* AddViewController.swift */; };
+		AAAC835C20628B8B0096FD54 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835B20628B8B0096FD54 /* PostViewController.swift */; };
 		AAAC835E20628B9C0096FD54 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */; };
 		AAAC836020628BA80096FD54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC835F20628BA80096FD54 /* ProfileViewController.swift */; };
-		AAAC83622062A00A0096FD54 /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */; };
 		AAAC83652062A4DE0096FD54 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC83642062A4DE0096FD54 /* Idea.swift */; };
+		AACC0D0D2064987E00050EB6 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC0D0C2064987E00050EB6 /* SearchLocationViewController.swift */; };
+		AACC0D0F2064FE4700050EB6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC0D0E2064FE4700050EB6 /* Comment.swift */; };
+		AACC0D112065148F00050EB6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC0D102065148F00050EB6 /* LocationViewController.swift */; };
+		AACC0D1920651B6400050EB6 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC0D1820651B6400050EB6 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA21913A206396F400209C2E /* IdeaDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdeaDetailTableViewCell.swift; path = "/Users/erwin/Desktop/Next Academy Projects/Project Folders/Final Assessment/IdeaApp/IdeaApp/MainTab/IdeaDetailTableViewCell.swift"; sourceTree = "<absolute>"; };
+		AA2191402063996600209C2E /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
+		AA2191412063996600209C2E /* IdeaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdeaTableViewCell.xib; sourceTree = "<group>"; };
+		AA2191442063A06D00209C2E /* IdeaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailViewController.swift; sourceTree = "<group>"; };
+		AA2191482063C85900209C2E /* IdeaDetailMapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailMapKitViewController.swift; sourceTree = "<group>"; };
 		AAAC833C206221100096FD54 /* IdeaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAC833F206221100096FD54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAAC8341206221100096FD54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -36,11 +49,14 @@
 		AAAC8353206224EE0096FD54 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AAAC835620626DEF0096FD54 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		AAAC8359206287EF0096FD54 /* IdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
-		AAAC835B20628B8B0096FD54 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AAAC835B20628B8B0096FD54 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		AAAC835F20628BA80096FD54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
 		AAAC83642062A4DE0096FD54 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		AACC0D0C2064987E00050EB6 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		AACC0D0E2064FE4700050EB6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		AACC0D102065148F00050EB6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		AACC0D1820651B6400050EB6 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		E99ADC2011F6646C7A5A0B27 /* Pods_IdeaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdeaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFE6DC97907FE627E12167C /* Pods-IdeaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaApp/Pods-IdeaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD88C3A8E064B5C1705D7F1 /* Pods-IdeaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdeaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdeaApp/Pods-IdeaApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +131,15 @@
 			isa = PBXGroup;
 			children = (
 				AAAC8359206287EF0096FD54 /* IdeaViewController.swift */,
-				AAAC83612062A00A0096FD54 /* IdeaTableViewCell.swift */,
-				AAAC835B20628B8B0096FD54 /* AddViewController.swift */,
+				AA2191402063996600209C2E /* IdeaTableViewCell.swift */,
+				AA2191412063996600209C2E /* IdeaTableViewCell.xib */,
+				AA2191442063A06D00209C2E /* IdeaDetailViewController.swift */,
+				AA2191482063C85900209C2E /* IdeaDetailMapKitViewController.swift */,
+				AA21913A206396F400209C2E /* IdeaDetailTableViewCell.swift */,
+				AAAC835B20628B8B0096FD54 /* PostViewController.swift */,
+				AACC0D0C2064987E00050EB6 /* SearchLocationViewController.swift */,
+				AACC0D102065148F00050EB6 /* LocationViewController.swift */,
+				AACC0D1820651B6400050EB6 /* LocationSearchTable.swift */,
 				AAAC835D20628B9C0096FD54 /* ExploreViewController.swift */,
 				AAAC835F20628BA80096FD54 /* ProfileViewController.swift */,
 			);
@@ -127,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AAAC83642062A4DE0096FD54 /* Idea.swift */,
+				AACC0D0E2064FE4700050EB6 /* Comment.swift */,
 			);
 			path = ClassFiles;
 			sourceTree = "<group>";
@@ -203,6 +227,7 @@
 			files = (
 				AAAC834A206221100096FD54 /* LaunchScreen.storyboard in Resources */,
 				AAAC8352206223670096FD54 /* GoogleService-Info.plist in Resources */,
+				AA2191432063996600209C2E /* IdeaTableViewCell.xib in Resources */,
 				AAAC8347206221100096FD54 /* Assets.xcassets in Resources */,
 				AAAC8345206221100096FD54 /* Main.storyboard in Resources */,
 			);
@@ -276,15 +301,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAAC8354206224EE0096FD54 /* SignUpViewController.swift in Sources */,
+				AA2191492063C85900209C2E /* IdeaDetailMapKitViewController.swift in Sources */,
 				AAAC8342206221100096FD54 /* LoginViewController.swift in Sources */,
 				AAAC83652062A4DE0096FD54 /* Idea.swift in Sources */,
-				AAAC835C20628B8B0096FD54 /* AddViewController.swift in Sources */,
+				AA2191422063996600209C2E /* IdeaTableViewCell.swift in Sources */,
+				AAAC835C20628B8B0096FD54 /* PostViewController.swift in Sources */,
+				AA21913C206396F500209C2E /* IdeaDetailTableViewCell.swift in Sources */,
+				AACC0D0D2064987E00050EB6 /* SearchLocationViewController.swift in Sources */,
 				AAAC835720626DEF0096FD54 /* Alert.swift in Sources */,
-				AAAC83622062A00A0096FD54 /* IdeaTableViewCell.swift in Sources */,
 				AAAC8340206221100096FD54 /* AppDelegate.swift in Sources */,
+				AACC0D0F2064FE4700050EB6 /* Comment.swift in Sources */,
 				AAAC835E20628B9C0096FD54 /* ExploreViewController.swift in Sources */,
 				AAAC836020628BA80096FD54 /* ProfileViewController.swift in Sources */,
 				AAAC835A206287EF0096FD54 /* IdeaViewController.swift in Sources */,
+				AACC0D1920651B6400050EB6 /* LocationSearchTable.swift in Sources */,
+				AA2191462063A06D00209C2E /* IdeaDetailViewController.swift in Sources */,
+				AACC0D112065148F00050EB6 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

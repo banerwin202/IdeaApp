@@ -41,11 +41,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.delegate = self
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-   
-    }
     
     //Disables Create Button if info are not filled up
     func setupAddTargetIsNotEmptyTextFields() {
@@ -88,25 +83,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func getImage(_ urlString: String, _ imageView: UIImageView) {
-        guard let url = URL.init(string: urlString) else {return}
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let validError = error {
-                print(validError.localizedDescription)
-            }
-            if let validData = data {
-                let image = UIImage(data: validData)
-                
-                DispatchQueue.main.async {
-                    imageView.image = image
-                }
-            }
-        }
-        task.resume()
-    }
-    
     func uploadToStorage(_ image: UIImage) {
         let storageRef = Storage.storage().reference()
         
@@ -132,10 +108,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             profileImageView.contentMode = .scaleAspectFit
             profileImageView.image = pickedImage
             
-            //upload the image immediate after select, thats why put the code here
-            if let image = profileImageView.image {
-                self.uploadToStorage(image)
-            }
         }
         dismiss(animated: true, completion: nil)
     }
@@ -170,6 +142,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.emailTextField.text = ""
                     self.lastNameTextField.text = ""
                     self.passwordTextField.text = ""
+                    
+                    if let image = self.profileImageView.image {
+                        self.uploadToStorage(image)
+                    }
                     
                     let userPost: [String:Any] = ["FirstName": firstName, "Email": email, "LastName" : lastName]
                     
