@@ -42,12 +42,18 @@ class ExploreViewController: UIViewController, UISearchBarDelegate{
     
 //Search Bar Function
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        currentIdeaArray = ideas.filter({ (idea) -> Bool in
-            guard let text = searchBar.text else {return false}
-            return idea.title.contains(text)
-        })
+        guard !searchText.isEmpty else {
+            currentIdeaArray = ideas
             tableView.reloadData()
+            return
         }
+        
+        currentIdeaArray = ideas.filter({ (idea) -> Bool in
+            return idea.title.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+        
+    }
 
 
     func observeIdea() {
@@ -55,12 +61,15 @@ class ExploreViewController: UIViewController, UISearchBarDelegate{
             guard let userDict = snapshot.value as? [String:Any] else {return}
             let user = Idea(uid: snapshot.key, dict: userDict)
             
-            self.currentIdeaArray = self.ideas
+           
             DispatchQueue.main.async {
                 self.ideas.append(user)
+                // Put here!
+                self.currentIdeaArray = self.ideas
                 let indexPath = IndexPath(row: self.ideas.count - 1, section: 0)
                 self.tableView.insertRows(at: [indexPath], with: .automatic)
                 
+             
             }
             self.tableView.reloadData()
         }
@@ -74,7 +83,7 @@ class ExploreViewController: UIViewController, UISearchBarDelegate{
 
 extension ExploreViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-             return ideas.count
+             return currentIdeaArray.count
        
     }
     
@@ -82,10 +91,14 @@ extension ExploreViewController : UITableViewDataSource {
       
             guard let cell = Bundle.main.loadNibNamed("IdeaTableViewCell", owner: self, options: nil)?.first as? IdeaTableViewCell else {return UITableViewCell()}
             
-            cell.titleLabel.text = ideas[indexPath.row].title
-            cell.dateLabel.text = ideas[indexPath.row].date
-            cell.statusLabel.text = ideas[indexPath.row].status
-            
+//            cell.titleLabel.text = ideas[indexPath.row].title
+//            cell.dateLabel.text = ideas[indexPath.row].date
+//            cell.statusLabel.text = ideas[indexPath.row].status
+        
+            cell.titleLabel.text = currentIdeaArray[indexPath.row].title
+            cell.dateLabel.text = currentIdeaArray[indexPath.row].date
+            cell.statusLabel.text = currentIdeaArray[indexPath.row].status
+        
             return cell
         }
     }
